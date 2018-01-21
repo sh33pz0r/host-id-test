@@ -16,7 +16,7 @@ def dockerHubUser = "yuri1987"
 def dockerHubPwd = "${env.DOCKERHUBPASS}"
 def image = "${dockerHubUser}/host-id"
 
-def gitHubRepoUrl = "https://github.com/sh33pz0r/host-id-app.git"
+def gitHubRepoUrl = "https://github.com/sh33pz0r/host-id-test.git"
 def shortCommit = ''
 def tag = ''
 
