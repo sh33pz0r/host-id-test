@@ -13,7 +13,6 @@
 
 //##DOCKERHUB
 def dockerHubUser = "yuri1987"
-def dockerHubPwd = "${DOCKERHUBPASS}"
 def image = "${dockerHubUser}/host-id"
 
 def gitHubRepoUrl = "https://github.com/sh33pz0r/host-id-test.git"
@@ -67,7 +66,7 @@ node {
     }
     else{
        stage('Push image to DockerHub') {
-           sh "docker login -u ${dockerHubUser} -p ${dockerHubPwd}"
+           sh "docker login -u ${dockerHubUser} -p ${DOCKERHUBPASS}"
            sh "docker push ${image}:${tag}"     
         }
     }
