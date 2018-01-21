@@ -70,7 +70,8 @@ node {
            withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: docker,
            usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
            sh "docker login -u $USERNAME -p $PASSWORD"
-           sh "docker push ${image}:${tag}"     
+           sh "docker push ${image}:${tag}"
+           }
         }
     }
     
