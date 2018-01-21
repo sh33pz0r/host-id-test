@@ -12,8 +12,8 @@
 //def gcrSecretPath = '/root/key.json'
 
 //##DOCKERHUB
-def dockerHubUser = "<yourDockerHubUser>"
-def dockerHubPwd = "<yourDockerHubPwd>"
+def dockerHubUser = "yuri1987"
+def dockerHubPwd = "${env.DOCKERHUBPASS}"
 def image = "${dockerHubUser}/host-id"
 
 def gitHubRepoUrl = "https://github.com/${dockerHubUser}/host-id-app.git"
