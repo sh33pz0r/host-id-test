@@ -13,7 +13,7 @@
 
 //##DOCKERHUB
 def dockerHubUser = "yuri1987"
-def dockerHubPwd = ${env.DOCKERHUBPASS}
+def dockerHubPwd = ${DOCKERHUBPASS}
 def image = "${dockerHubUser}/host-id"
 
 def gitHubRepoUrl = "https://github.com/sh33pz0r/host-id-test.git"
