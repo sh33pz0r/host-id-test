@@ -66,7 +66,7 @@ node {
     }
     else{
        stage('Push image to DockerHub') {
-           sh "docker login -u $USERNAME -p $PASSWORD"
+           sh "docker login -u ${dockerHubUser} -p $PASSWORD"
            sh "docker push ${image}:${tag}"
         }
     }
